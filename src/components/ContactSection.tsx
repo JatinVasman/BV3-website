@@ -11,7 +11,6 @@ export function ContactSection() {
     service: 'Social Media Management',
     message: '',
   });
-  const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(
     null
   );
@@ -21,38 +20,25 @@ export function ContactSection() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
+    // Open WhatsApp with form data
+    const whatsappText = encodeURIComponent(
+      `Hi, I'm interested in your services.\n\n` +
+        `*Name:* ${form.name}\n` +
+        `*Email:* ${form.email}\n` +
+        `*Service:* ${form.service}\n\n` +
+        `*Message:*\n${form.message}`
+    );
+    window.open(`${socialLinks.whatsapp}?text=${whatsappText}`, '_blank');
 
-      if (response.ok) {
-        setMessage({ type: 'success', text: 'Email sent successfully! We will be in touch soon.' });
-        setForm({ name: '', email: '', service: 'Social Media Management', message: '' });
-
-        // Open WhatsApp
-        const whatsappText = encodeURIComponent(
-          `Hi, I just submitted a contact form on your website.\n\n` +
-            `*Name:* ${form.name}\n` +
-            `*Email:* ${form.email}\n` +
-            `*Service:* ${form.service}\n\n` +
-            `*Message:*\n${form.message}`
-        );
-        window.open(`${socialLinks.whatsapp}?text=${whatsappText}`, '_blank');
-      } else {
-        setMessage({ type: 'error', text: 'Failed to send email. Please try again.' });
-      }
-    } catch {
-      setMessage({ type: 'error', text: 'An error occurred. Please try again.' });
-    } finally {
-      setIsLoading(false);
-    }
+    // Reset form
+    setForm({ name: '', email: '', service: 'Social Media Management', message: '' });
+    setMessage({ type: 'success', text: 'Opening WhatsApp to continue the conversation!' });
+    
+    // Clear message after 3 seconds
+    setTimeout(() => setMessage(null), 3000);
   };
 
   return (
@@ -168,10 +154,9 @@ export function ContactSection() {
 
             <button
               type="submit"
-              disabled={isLoading}
-              className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn-primary w-full"
             >
-              {isLoading ? 'Sending...' : 'Send Message'}
+              Start WhatsApp Chat
             </button>
           </motion.form>
 
