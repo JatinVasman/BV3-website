@@ -24,7 +24,7 @@ export function PortfolioSection() {
           <p className="text-gray-400 mt-4">
             Websites that deliver results and leave lasting impressions
           </p>
-          <div className="h-1 w-24 bg-gradient-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
+          <div className="h-1 w-24 bg-linear-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
         </motion.div>
 
         {/* Projects Grid */}
@@ -48,7 +48,7 @@ export function PortfolioSection() {
                   alt={project.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-linear-to-t from-dark via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
               </div>
 
               <div className="p-6">

@@ -22,7 +22,7 @@ export function TestimonialsSection() {
           <h2 className="text-4xl md:text-5xl font-playfair font-bold mt-4">
             What <span className="text-gradient">Our Clients Say</span>
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
+          <div className="h-1 w-24 bg-linear-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
         </motion.div>
 
         {/* Testimonials Grid */}
@@ -46,7 +46,7 @@ export function TestimonialsSection() {
               </div>
 
               {/* Text */}
-              <p className="text-gray-300 text-sm mb-6 flex-grow leading-relaxed">
+              <p className="text-gray-300 text-sm mb-6 grow leading-relaxed">
                 "{testimonial.text}"
               </p>
 

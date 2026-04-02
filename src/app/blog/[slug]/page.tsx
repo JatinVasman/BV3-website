@@ -65,7 +65,7 @@ export default async function BlogPostPage({
       <div className="py-12 container-custom">
         <div className="max-w-3xl">
           {/* Featured Image Placeholder */}
-          <div className="w-full h-96 bg-gradient-to-br from-gold/10 to-gold-dark/10 rounded-2xl mb-12 flex items-center justify-center">
+          <div className="w-full h-96 bg-linear-to-br from-gold/10 to-gold-dark/10 rounded-2xl mb-12 flex items-center justify-center">
             <p className="text-gold text-8xl opacity-20">📝</p>
           </div>
 

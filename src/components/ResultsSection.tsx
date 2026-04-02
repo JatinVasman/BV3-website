@@ -59,7 +59,7 @@ export function ResultsSection() {
           <h2 className="text-4xl md:text-5xl font-playfair font-bold mt-4">
             Impact by the <span className="text-gradient">Numbers</span>
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
+          <div className="h-1 w-24 bg-linear-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
         </motion.div>
 
         {/* Stats Grid */}

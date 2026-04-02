@@ -28,7 +28,7 @@ export function CRMSection() {
             Streamline engagement, automate communication, and gain actionable insights with our
             intelligent CRM solutions designed for modern businesses.
           </p>
-          <div className="h-1 w-24 bg-gradient-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
+          <div className="h-1 w-24 bg-linear-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
         </motion.div>
 
         {/* CRM Pipeline - Tabs */}

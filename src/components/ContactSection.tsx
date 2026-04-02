@@ -61,7 +61,7 @@ export function ContactSection() {
           <p className="text-gray-400 mt-4">
             Reach out to us today to discuss your project and see how we can help your business grow.
           </p>
-          <div className="h-1 w-24 bg-gradient-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
+          <div className="h-1 w-24 bg-linear-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

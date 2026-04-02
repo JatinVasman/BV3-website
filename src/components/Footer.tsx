@@ -97,7 +97,7 @@ export function Footer() {
             <h3 className="text-white font-playfair font-bold mb-4">Contact Info</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3 text-gray-400">
-                <Mail size={18} className="text-gold flex-shrink-0" />
+                <Mail size={18} className="text-gold shrink-0" />
                 <a
                   href={`mailto:${contactInfo.email}`}
                   className="hover:text-gold transition-colors"
@@ -106,7 +106,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex gap-3 text-gray-400">
-                <Phone size={18} className="text-gold flex-shrink-0" />
+                <Phone size={18} className="text-gold shrink-0" />
                 <a
                   href={`tel:${contactInfo.phone}`}
                   className="hover:text-gold transition-colors"
@@ -115,7 +115,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex gap-3 text-gray-400">
-                <MapPin size={18} className="text-gold flex-shrink-0" />
+                <MapPin size={18} className="text-gold shrink-0" />
                 <span>{contactInfo.address}</span>
               </li>
             </ul>

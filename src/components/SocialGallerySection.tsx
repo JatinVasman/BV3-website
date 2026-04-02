@@ -43,7 +43,7 @@ export function SocialGallerySection() {
             A showcase of our social media designs — from branding to campaign visuals — crafted to
             engage audiences and drive results.
           </p>
-          <div className="h-1 w-24 bg-gradient-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
+          <div className="h-1 w-24 bg-linear-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
         </motion.div>
 
         {/* Masonry Gallery */}

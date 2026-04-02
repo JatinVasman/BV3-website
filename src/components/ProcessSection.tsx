@@ -21,7 +21,7 @@ export function ProcessSection() {
           <h2 className="text-4xl md:text-5xl font-playfair font-bold mt-4">
             Our <span className="text-gradient">Process</span>
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
+          <div className="h-1 w-24 bg-linear-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
         </motion.div>
 
         {/* Steps Grid */}
@@ -36,7 +36,7 @@ export function ProcessSection() {
               className="glass rounded-xl p-6 md:p-8 text-center relative group hover:shadow-gold-glow transition-all duration-300"
             >
               {/* Step Number Circle */}
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center font-playfair font-bold text-dark">
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-linear-to-br from-gold to-gold-light flex items-center justify-center font-playfair font-bold text-dark">
                 {step.number}
               </div>
 
@@ -50,7 +50,7 @@ export function ProcessSection() {
 
               {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-gold to-transparent" />
+                <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-linear-to-r from-gold to-transparent" />
               )}
             </motion.div>
           ))}

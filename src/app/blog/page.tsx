@@ -28,7 +28,7 @@ export default function BlogPage() {
               href={`/blog/${post.slug}`}
               className="group glass rounded-xl overflow-hidden hover:shadow-gold-glow transition-all duration-300 hover:scale-105"
             >
-              <div className="h-48 bg-gradient-to-br from-gold/20 to-gold-dark/20 flex items-center justify-center">
+              <div className="h-48 bg-linear-to-br from-gold/20 to-gold-dark/20 flex items-center justify-center">
                 <div className="text-center">
                   <p className="text-gold font-playfair text-5xl opacity-20">✍️</p>
                 </div>

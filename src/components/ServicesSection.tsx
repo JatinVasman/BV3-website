@@ -21,7 +21,7 @@ export function ServicesSection() {
           <h2 className="text-4xl md:text-5xl font-playfair font-bold mt-4">
             What We <span className="text-gradient">Offer</span>
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
+          <div className="h-1 w-24 bg-linear-to-r from-gold to-gold-light rounded-full mx-auto mt-6" />
         </motion.div>
 
         {/* Services Grid */}
