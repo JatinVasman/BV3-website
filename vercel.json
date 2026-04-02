@@ -1,14 +1,5 @@
 {
   "buildCommand": "next build",
   "outputDirectory": ".next",
-  "devCommand": "next dev",
-  "env": {
-    "RESEND_API_KEY": "@resend_api_key"
-  },
-  "functions": {
-    "api/contact/route.ts": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  }
+  "devCommand": "next dev"
 }

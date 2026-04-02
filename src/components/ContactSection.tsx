@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { contactInfo, socialLinks } from '@/data/content';
+import { contactInfo } from '@/data/content';
 
 export function ContactSection() {
   const [form, setForm] = useState({
@@ -23,19 +23,20 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Open WhatsApp with form data
-    const whatsappText = encodeURIComponent(
-      `Hi, I'm interested in your services.\n\n` +
-        `*Name:* ${form.name}\n` +
-        `*Email:* ${form.email}\n` +
-        `*Service:* ${form.service}\n\n` +
-        `*Message:*\n${form.message}`
+    // Build mailto link with form data
+    const subject = encodeURIComponent(`Inquiry: ${form.service}`);
+    const body = encodeURIComponent(
+      `Hi,\n\nI'm interested in your services.\n\n` +
+        `Name: ${form.name}\n` +
+        `Email: ${form.email}\n` +
+        `Service: ${form.service}\n\n` +
+        `Message:\n${form.message}`
     );
-    window.open(`${socialLinks.whatsapp}?text=${whatsappText}`, '_blank');
+    window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
 
     // Reset form
     setForm({ name: '', email: '', service: 'Social Media Management', message: '' });
-    setMessage({ type: 'success', text: 'Opening WhatsApp to continue the conversation!' });
+    setMessage({ type: 'success', text: 'Opening your email client...' });
     
     // Clear message after 3 seconds
     setTimeout(() => setMessage(null), 3000);
@@ -156,7 +157,7 @@ export function ContactSection() {
               type="submit"
               className="btn-primary w-full"
             >
-              Start WhatsApp Chat
+              Send Email
             </button>
           </motion.form>
 
