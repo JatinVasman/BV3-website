@@ -1,0 +1,25 @@
+{
+  "name": "Business Volunteers",
+  "short_name": "BV",
+  "description": "Digital Marketing Agency - Creative solutions that move brands forward",
+  "start_url": "https://businessvolunteers.online",
+  "scope": "https://businessvolunteers.online",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#c9a84c",
+  "background_color": "#0d0d0d",
+  "icons": [
+    {
+      "src": "/logo-dark.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo-dark.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
