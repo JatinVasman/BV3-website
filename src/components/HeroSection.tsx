@@ -89,7 +89,7 @@ export function HeroSection() {
             className="rounded-2xl overflow-hidden shadow-lg shadow-gold/10"
           >
             <video
-              src="/headeer video.mp4"
+              src="/hero-video.mp4"
               autoPlay
               muted
               loop
